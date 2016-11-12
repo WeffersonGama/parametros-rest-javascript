@@ -1,0 +1,31 @@
+/************************************************************************
+* O parâmetro rest é uma novidade que veio na ES6, mas apesar da        *
+* especificação ter sido finalizada, ainda não é compatível em todos os *
+* browsers.                                                             *
+* Descrição: basta colocar o prefixo (...) antes do "único ou último"   *
+* argumento que será declarado. Em nosso exemplo abaixo declaramos o    *
+* parâmetro (addams) que veio precedido do prefixo (...), dessa forma   *
+* nosso parâmetro se torna um array de 0 ou mais elementos.             *
+************************************************************************/
+
+var family = function (...addams) {
+    let membros;
+    // Exibo os valores passados a função por do parâmetro addams[]
+    for (membros of addams) {
+        console.log (membros);
+    }
+};
+
+// Insira na chamada da função os nomes dos membros da família Addams.
+family ('Gomez Addams', ' Mortícia Addams', ' Wandinha Addams', ' Pugsley Addams', ' Tio Fester Addams', ' Vovó Addams', ' A Coisa', ' Primo Coisa', ' Lurch');
+
+// Retorno:
+// Gomez Addams
+// Mortícia Addams
+// Wandinha Addams
+// Pugsley Addams
+// Tio Fester Addams
+// Vovó Addams
+// A Coisa
+// Primo Coisa
+// Lurch
